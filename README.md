@@ -109,7 +109,7 @@ another aternative is given below:
 //SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
-import "./akrkSimplestorage.sol"
+import "./akrkSimplestorage.sol";
 
 contract akrkStoragefactory {
 
@@ -133,6 +133,18 @@ Figure7: here we see that that the contract ```contract akrkStoragefactory``` ha
 
 When a contract of a file deploy contract of another file the solidity version of both file must be compatible i.e if version of of a file is ^0.8.0 other <br>
 must not be ^0.7.0<br>
+
+![w17](https://user-images.githubusercontent.com/89090776/231091399-87e97613-e150-4939-a324-9e6bd8a97986.jpg)
+Figure8: after deploying the contract we see that we have ```akrksimplestorageArray``` view button
+![w18](https://user-images.githubusercontent.com/89090776/231092783-1a901de0-65bd-481e-9347-2e89f14ac274.jpg)
+Figure9: here when we click ```createakrkSimplestorage``` button transaction occured that means contract was deployed and then we typed '0' at the field of <br> ```akrksimplestorageArray``` button and see that at '0' inex an address of the contract have been assinged.
+
+![w19](https://user-images.githubusercontent.com/89090776/231094487-f568517d-ca21-4724-91ec-20c90317206f.jpg)
+Figure10: Again we click on ```createakrkSimplestorage``` button transaction will occur that means contract will be deployed and if we typed '1' at the field of <br> ```akrksimplestorageArray``` button and see that at '1' inex a new address of the contract have been assinged.
+
+
+
+
 
 
 
