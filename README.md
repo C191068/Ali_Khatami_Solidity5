@@ -134,6 +134,34 @@ Figure7: here we see that that the contract ```contract akrkStoragefactory``` ha
 When a contract of a file deploy contract of another file the solidity version of both file must be compatible i.e if version of of a file is ^0.8.0 other <br>
 must not be ^0.7.0<br>
 
+
+Here we have worked with array
+
+```
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+import "./akrkSimplestorage.sol";
+
+contract akrkStoragefactory {
+
+    akrkSimplestorage[] public akrksimplestorageArray; //here we have created an array
+
+    function createakrkSimplestorage() public{
+        akrkSimplestorage akrksimplestorage = new akrkSimplestorage();// here we save it as a memory variable
+       //here `new` keyword is used to let the solidiy know that we are going to deploy new akrkSimplestorage()
+
+
+       akrksimplestorageArray.push(akrksimplestorage);// adding akrksimplestorage variable to akrksimplestorageArray
+
+
+
+    } // This is a function to deploy our akrkSimplestorage contract
+
+}
+
+```
+
 ![w17](https://user-images.githubusercontent.com/89090776/231091399-87e97613-e150-4939-a324-9e6bd8a97986.jpg)
 Figure8: after deploying the contract we see that we have ```akrksimplestorageArray``` view button
 ![w18](https://user-images.githubusercontent.com/89090776/231092783-1a901de0-65bd-481e-9347-2e89f14ac274.jpg)
