@@ -87,5 +87,7 @@ contract akrkStoragefactory {
 ```
 
 ![w11](https://user-images.githubusercontent.com/89090776/230873674-91a0d63c-cfda-4600-b3f7-cbf17ed6a004.jpg)
+Figure3: here we will see that two buttons have been created one is due to ```createakrkSimplestorage()``` which is ```createakrkSimplestorage``` buuton<br>
+it is a gas calling function and another one is ```akrkSimplestorage``` button which is due to our ```akrkSimplestorage``` contract and it is a non gas calling function.
 
 
