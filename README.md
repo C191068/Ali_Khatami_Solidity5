@@ -1,3 +1,4 @@
+
 ## Ali_Khatami_Solidity5
 ### Contract deploying Contract
 The ability of contracts interacting with each other is known as composability. Smart Contracts are composeble because they can easily interact with each other.<br>
@@ -86,8 +87,54 @@ contract akrkStoragefactory {
 
 ```
 
+In the bove code whenever we will call ```function createakrkSimplestorage() public``` it will replace whatever currently is in ```akrkSimplestorage public akrksimplestorage;``` variable
+
 ![w11](https://user-images.githubusercontent.com/89090776/230873674-91a0d63c-cfda-4600-b3f7-cbf17ed6a004.jpg)
 Figure3: here we will see that two buttons have been created one is due to ```createakrkSimplestorage()``` which is ```createakrkSimplestorage``` buuton<br>
-it is a gas calling function and another one is ```akrkSimplestorage``` button which is due to our ```akrkSimplestorage``` contract and it is a non gas calling function.
+it is a gas calling function and another one is ```akrkSimplestorage``` button which is due to our global variable ```akrkSimplestorage public akrksimplestorage```  and it is a non gas calling function.
+
+![w12](https://user-images.githubusercontent.com/89090776/231064667-6b01615f-9fec-4351-b8ce-33e53cdcb77c.jpg)
+Figure4: Here when we hit the ```akrkSimplestorage``` button it shows the address blank because ```akrkSimplestorage public akrksimplestorage``` is initialized to blank.
+
+![w13](https://user-images.githubusercontent.com/89090776/231066290-f4ad2505-837b-41b7-9a8d-ff59fd813981.jpg)
+Figure5: here we see we after clicking ```createakrkSimplestorage``` button we have created a new function at our console which is<br> ```akrkStoragefactory.createakrkSimplestorage()``` and by doing so we have created a new ```akrkSimplestorage``` contract.
+
+![w15](https://user-images.githubusercontent.com/89090776/231067145-e3a1b2d9-9608-455b-9241-d0531e595862.jpg)
+Figure6: Now if we click the ```akrkSimplestorage``` button we can see the address associted with it.And here we understood how a contract can deploy another contract.
+
+
+another aternative is given below:
+
+```
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+import "./akrkSimplestorage.sol"
+
+contract akrkStoragefactory {
+
+    akrkSimplestorage public akrksimplestorage; //here we have created a global variable 
+
+    function createakrkSimplestorage() public{
+        akrksimplestorage = new akrkSimplestorage();
+       //here `new` keyword is used to let the solidiy know that we are going to deploy new akrkSimplestorage()
+
+    } // This is a function to deploy our akrkSimplestorage contract
+
+}
+```
+
+here in the above code of ```akrkStorageFactory.sol```the line  ```import ./akrkSimplestorage.sol``` is exact the same as the copy paste of ```akrkSimplestorage.sol``` file<br>
+i.e it takes the path of ```akrkSimplestorage.sol``` and paste all code of this file at ```akrkStorageFactory.sol```
+
+
+![w16](https://user-images.githubusercontent.com/89090776/231071349-512178a6-c6e7-4fa0-af93-8e68b5f32cc5.jpg)
+Figure7: here we see that that the contract ```contract akrkStoragefactory``` have deployed contract ```contract akrkSimplestorage``` as before. 
+
+When a contract of a file deploy contract of another file the solidity version of both file must be compatible i.e if version of of a file is ^0.8.0 other <br>
+must not be ^0.7.0<br>
+
+
+
 
 
