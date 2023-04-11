@@ -145,7 +145,8 @@ import "./akrkSimplestorage.sol";
 
 contract akrkStoragefactory {
 
-    akrkSimplestorage[] public akrksimplestorageArray; //here we have created an array
+    akrkSimplestorage[] public akrksimplestorageArray; ////here we have created an array to store addresses of the contracts
+
 
     function createakrkSimplestorage() public{
         akrkSimplestorage akrksimplestorage = new akrkSimplestorage();// here we save it as a memory variable
@@ -169,6 +170,65 @@ Figure9: here when we click ```createakrkSimplestorage``` button transaction occ
 
 ![w19](https://user-images.githubusercontent.com/89090776/231094487-f568517d-ca21-4724-91ec-20c90317206f.jpg)
 Figure10: Again we click on ```createakrkSimplestorage``` button transaction will occur that means contract will be deployed and if we typed '1' at the field of <br> ```akrksimplestorageArray``` button and see that at '1' inex a new address of the contract have been assinged.
+
+
+
+<br><br>
+
+
+
+### Interacting with other contracts
+
+Here we will show that how to call a function of ```akrkSimplestorage.sol``` file  from ```akrkStorageFactory.sol``` file. In order to interact with any contract <br>
+we always gonna need two things the address of the contract and ABI of the contract <br>
+ABI stands for Application Binary Interface and it will tell our code of how exactly it will interact with the contract and it will tell all inputs and <br>
+outputs and all we can do with this contract
+
+![w20](https://user-images.githubusercontent.com/89090776/231108130-f8d3cdc4-e1db-4286-996a-c375de287c36.jpg)
+Figure11: now we will go to ```Solidity Compiler``` tab and switch to contract ```akrkSimplestorage``` we will see below ```Compilation Details``` <br>
+
+![w21](https://user-images.githubusercontent.com/89090776/231110285-bc465008-acda-4124-934f-470e6098f4fc.jpg)
+Figure12: here we will click ```ABI``` and here we will get four different ways to inteerct with the contract and details of each ways.<br>
+
+We will get addresses at ```akrkSimplestorage[] public akrksimplestorageArray;``` and ABI because of this line ```import "./akrkSimplestorage.sol";```
+
+
+```
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+import "./akrkSimplestorage.sol";
+
+contract akrkStoragefactory {
+
+    akrkSimplestorage[] public akrksimplestorageArray; //here we have created an array to store addresses of the contracts
+
+    function createakrkSimplestorage() public{
+        akrkSimplestorage akrksimplestorage = new akrkSimplestorage();// here we save it as a memory variable
+       //here `new` keyword is used to let the solidiy know that we are going to deploy new akrkSimplestorage()
+
+
+       akrksimplestorageArray.push(akrksimplestorage);// adding akrksimplestorage variable to akrksimplestorageArray
+
+
+
+    } // This is a function to deploy our akrkSimplestorage contract
+
+
+    function asfStore(uint256 _akrksimplestorageIndex,uint256 _akrksimplestorageNumber) public {
+
+        akrkSimplestorage akrksimplestorage =  akrksimplestorageArray[_akrksimplestorageIndex];  //accesing the simple storage through index and saving to akrksimplestorage variable
+
+
+    }
+
+}
+
+```
+
+
+
+
 
 
 
