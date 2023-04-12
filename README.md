@@ -213,6 +213,8 @@ contract akrkStoragefactory {
 
 
     } // This is a function to deploy our akrkSimplestorage contract
+    
+    //below we have called function from ```akrksimplestoarge``` contract and store values from this ```akrkstoragefactory``` contract
 
 
     function asfStore(uint256 _akrksimplestorageIndex,uint256 _akrksimplestorageNumber) public {
@@ -239,6 +241,20 @@ contract akrkStoragefactory {
 After deploying the above code we will get the following output
 
 ![w22](https://user-images.githubusercontent.com/89090776/231353554-25204606-2551-45ca-897a-b90584d64d2a.jpg)
+Figure13: output of the contract at deploy and run transaction tab
+
+![w23](https://user-images.githubusercontent.com/89090776/231354024-64394d58-52b0-41bd-aabe-7f699643d673.jpg)
+Figure14:After clicking the gas calling function ```createakrkSimplestorage``` button when we typed '0' at non gas function's button 'akrkSimplestorage' button we see
+address assinged at '0' index
+
+![w24](https://user-images.githubusercontent.com/89090776/231355010-f42b0d95-e175-4141-abdf-1d86c39192c2.jpg)
+Figure15: here at ```asfStore``` button field we typed '0' which is ```akrksimplestorageIndex``` and 18 which is ```akrksimplestorageNumber``` and that is we are<br>
+storing number '18' at '0' index of this contract which is ```akrkSimplestorage```
+
+![w25](https://user-images.githubusercontent.com/89090776/231361688-b4cb989b-3eb6-4884-a82a-4131e8b31ff6.jpg)
+Figure16: here we have two contracts ```akrkSimplestorage.sol``` that will store variables and another one is ```akrkStorageFactory.sol``` contract that<br>
+will act as a manager of ```akrkSimplestorage``` contract which will deploy and interact with it.
+
 
 
 
