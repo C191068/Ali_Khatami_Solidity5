@@ -219,12 +219,28 @@ contract akrkStoragefactory {
 
         akrkSimplestorage akrksimplestorage =  akrksimplestorageArray[_akrksimplestorageIndex];  //We are saving akrkSimplestorage contract object at 'akrksimplestorageIndex' to our 'akrksimplestorage' variable
 
+        akrksimplestorage.store(_akrksimplestorageNumber);// Calling the store function of 'akrkSimplestorage' contract
+
+    }
+
+    //Below we will create a function that gonna read from 'akrksimplestorage' contract 
+
+    function sfGet(uint256 _akrksimplestorageIndex) public view returns(uint256) {
+        akrkSimplestorage akrksimplestorage =  akrksimplestorageArray[_akrksimplestorageIndex];
+
+        return akrksimplestorage.retrieve();// to get the number we stored at the previous function
 
     }
 
 }
 
 ```
+
+After deploying the above code we will get the following output
+
+![w22](https://user-images.githubusercontent.com/89090776/231353554-25204606-2551-45ca-897a-b90584d64d2a.jpg)
+
+
 
 
 
