@@ -217,7 +217,7 @@ contract akrkStoragefactory {
 
     function asfStore(uint256 _akrksimplestorageIndex,uint256 _akrksimplestorageNumber) public {
 
-        akrkSimplestorage akrksimplestorage =  akrksimplestorageArray[_akrksimplestorageIndex];  //accesing the simple storage through index and saving to akrksimplestorage variable
+        akrkSimplestorage akrksimplestorage =  akrksimplestorageArray[_akrksimplestorageIndex];  //We are saving akrkSimplestorage contract object at 'akrksimplestorageIndex' to our 'akrksimplestorage' variable
 
 
     }
