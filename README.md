@@ -13,7 +13,8 @@ Figure2: we will copy everything below ```pragma solidity ^0.8.7``` of ```akrkSi
 
 Single solidity file can hold multiple different contracts. here is the code below:
 
-```
+```solidity
+
 //SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
@@ -105,7 +106,8 @@ Figure6: Now if we click the ```akrkSimplestorage``` button we can see the addre
 
 another aternative is given below:
 
-```
+```solidity
+
 //SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
@@ -137,7 +139,8 @@ must not be ^0.7.0<br>
 
 Here we have worked with array
 
-```
+```solidity
+
 //SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
@@ -193,7 +196,8 @@ Figure12: here we will click ```ABI``` and here we will get four different ways 
 We will get addresses at ```akrkSimplestorage[] public akrksimplestorageArray;``` and ABI because of this line ```import "./akrkSimplestorage.sol";```
 
 
-```
+```solidity
+
 //SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
@@ -268,7 +272,8 @@ the functionality of ```akrkSimplestorage``` contract<br>
 
 by creating a new solidity file ```akrkExtrastorage.sol``` file we will write the following code
 
-```
+```solidity
+
 //SPDX-License-Identifier:MIT
 
 pragma solidity ^0.8.0;
@@ -295,7 +300,8 @@ In order to override function of parent contract by child contratc we have to do
 ![w27](https://user-images.githubusercontent.com/89090776/231369780-06bfe594-983b-4ed0-ac69-8ea4efa26562.jpg)
 Figure2: we have to 'virtual' keyword at store fuunction of parent contract. the code is given below:
 
-```
+```solidity
+
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
@@ -361,7 +367,8 @@ contract akrkSimplestorage {
 ![w28](https://user-images.githubusercontent.com/89090776/231370350-98f8d581-9c5c-426f-96fd-b811abb2111d.jpg)
 Figure3: then we have to 'override' keyword to the inherited 'store' function of the child contract. The code is given below:
 
-```
+```solidity
+
 //SPDX-License-Identifier:MIT
 
 pragma solidity ^0.8.0;
